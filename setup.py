@@ -16,7 +16,7 @@ class PyTest(TestCommand):
     def initialize_options(self):
         TestCommand.initialize_options(self)
         self.cov = None
-        self.pytest_args = ['--cov', MAIN_PACKAGE, '--cov-report', 'term-missing',
+        self.pytest_args = ['tests/', '--cov', MAIN_PACKAGE, '--cov-report', 'term-missing',
                             '--doctest-modules', '-s', '-v',
                             '--ignore', 'tests/plugins']
         self.cov_html = False
